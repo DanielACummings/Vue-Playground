@@ -11,7 +11,7 @@
             display its value.
           </p>
           <!-- add event listener to the button element -->
-          <button @click="counter++" class="btn btn-primary m-2">Add 1</button>
+          <button @click="counter += 1" class="btn btn-primary m-2">Add 1</button>
           <p>
             The button has been clicked {{
             counter }} times.
@@ -39,20 +39,17 @@ export default {
   name: "events-exercise",
   data() {
     return {
-      //add property called "counter"
-      //add property called "greeting"
+      counter: 0,
+      greeting: "Hello World!"
     };
   },
   computed: {},
   methods: {
     greet() {
-      alert(greeting);
+      alert(this.greeting);
     }
   },
-  components: {
-    counter: 0,
-    greeting: "Hello World"
-  }
+  components: {}
 };
 </script>
 
